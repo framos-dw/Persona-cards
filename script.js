@@ -1,9 +1,9 @@
 // Text size
 let size = 100;
 function increaseText(){
-    if (size < 200){
+    if (size<200){
         size += 10;
-        document.body.style.fontSize = size + '%';
+        document.documentElement.style.fontSize = size + '%';
         document.getElementById("textSizePercent").textContent = size + '%';
     }
 }
@@ -11,16 +11,13 @@ function increaseText(){
 function decreaseText(){
     if (size>100){
         size -= 10;
-        document.body.style.fontSize = size + '%';
+        document.documentElement.style.fontSize = size + '%';
         document.getElementById("textSizePercent").textContent = size + '%';
     }
 }
 
 
-
-
-
-//Animação inicial
+//Animation
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll('.illustrations img');
     
@@ -34,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//Fetch text - personas
+//Personas info
 inicializarTTS();
 
 const BASE_URL = 'https://raw.githubusercontent.com/FRAMOS-DW/PERSONA-CARDS/main/personas.json';
