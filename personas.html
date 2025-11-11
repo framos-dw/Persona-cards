@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Persona Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo saying Persona Cards">
+        </a>
+    </div>
+    <nav>
+        <a href="index.html"  aria-label="home">home</a>
+        <a href="personas.html" class="active" aria-label="persona">personas</a>
+        <a href="beforeafter.html" aria-label="before vs after">before vs after</a>
+        <a href="about.html" aria-label="about">about</a>
+    </nav>
+
+    <div class="text-size-control" aria-label="Text size controls">
+        <span>Text Size</span>
+        <button onclick="decreaseText()" aria-label="Decrease text size">-</button>
+        <span id="textSizePercent">100%</span>
+        <button onclick="increaseText()" aria-label="Increase text size">+</button>
+    </div>
+    
+</header>
+
+<main>
+   <h1>Persona Cards</h1>
+    <section aria-label="Personas" class="card-list">
+        <!-- Card #1-->
+        <a href="persona.html?id=1" class="card card1" aria-label="Open Persona 1 details">
+            <img src="img/lea.webp" alt="Illustration of Lea, a young women with fatigue and pain using her computer.">
+        </a>
+
+        <!-- Card #2-->
+        <a href="persona.html?id=2" class="card card2" aria-label="Open Persona 2 details">
+            <img src="img/jacob.webp" alt="Illustration of Jacob, a blind young men looking at his computer.">
+        </a>
+
+        <!-- Card #3-->
+        <a href="persona.html?id=3" class="card card3" aria-label="Open Persona 3 details">
+            <img src="img/carol.webp" alt="Illustration of Carol, a grandmother with macular degeneration.">
+        </a>
+
+        <!-- Card #4-->
+        <a href="persona.html?id=4" class="card card4" aria-label="Open Persona 4 details">
+            <img src="img/steven.webp" alt="Illustration of Steven, adeaf ASL speaker. ">
+        </a>
+    </section>
+
+</main>
+
+<button id="top" onclick="backtotop()" aria-label="Go back to top">↑</button>
+
+<footer class="footer">
+    <div class="slider-control" aria-label="Volume slider-control">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume"  min="0" max="1" step="0.1" value="1" aria-valuetext="100%">
+    </div>
+    <div class="slider-control" aria-label="Speed slider-control">
+        <label for="velocidade">Speed</label>
+        <input type="range" id="velocidade" min="0.5" max="2" step="0.1" value="1" aria-valuetext="Normal speed">
+    </div>
+</footer>
+
+<script src="tts.js"></script>
+<script>
+  inicializarTTS();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

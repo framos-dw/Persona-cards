@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Persona Cards</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo saying Persona Cards">
+        </a>
+    </div>
+    <nav>
+        <a href="index.html"  aria-label="home">home</a>
+        <a href="personas.html" class="active" aria-label="persona">personas</a>
+        <a href="beforeafter.html" aria-label="before vs after">before vs after</a>
+        <a href="about.html" aria-label="about">about</a>
+    </nav>
+
+    <div class="text-size-control" aria-label="Text size controls">
+        <span>Text Size</span>
+        <button onclick="decreaseText()" aria-label="Decrease text size">-</button>
+        <span id="textSizePercent">100%</span>
+        <button onclick="increaseText()" aria-label="Increase text size">+</button>
+    </div>
+
+</header>
+
+<main>
+    <a class="back-btn" href="personas.html" aria-label="Back to personas"> ← Back to Personas</a>
+    <h2 id="title" class="t-persona">Title</h2>
+    <article id="text"></article>
+    <figure>
+        <img id="img">
+    </figure>
+</main>
+
+<button id="top" onclick="backtotop()" aria-label="Go back to top">↑</button>
+
+<footer class="footer">
+    <div class="slider-control" aria-label="Volume slider-control">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume"  min="0" max="1" step="0.1" value="1" aria-valuetext="100%">
+    </div>
+    <div class="slider-control" aria-label="Speed slider-control">
+        <label for="velocidade">Speed</label>
+        <input type="range" id="velocidade" min="0.5" max="2" step="0.1" value="1" aria-valuetext="Normal speed">
+    </div>
+</footer>
+
+<script src="tts.js"></script>
+<script>
+  inicializarTTS();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Persona Cards</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo saying Persona Cards">
+        </a>
+    </div>
+    <nav>
+        <a href="index.html"  aria-label="home">home</a>
+        <a href="personas.html"  aria-label="persona">personas</a>
+        <a href="beforeafter.html" aria-label="before vs after">before vs after</a>
+        <a href="about.html" class="active" aria-label="about">about</a>
+    </nav>
+
+    <div class="text-size-control" aria-label="Text size controls">
+        <span>Text Size</span>
+        <button onclick="decreaseText()" aria-label="Decrease text size">-</button>
+        <span id="textSizePercent">100%</span>
+        <button onclick="increaseText()" aria-label="Increase text size">+</button>
+    </div>
+    
+</header>
+
+<main>
+    <h1 id="about">About</h1>
+    <section>
+        <p id="about-text"> This website was created as an accessible alternative to traditional personal cards. It was designed for John, a 76-year-old internet user who has experienced age-related vision and hearing loss.
+The interface features large, easy-to-read typography, text-to-speech with adjustable speed and volume, high-contrast colours, simple navigation, keyboard accessibility, and the option to increase text size by up to 200%. The aim is to present information in a clear and calm way that is easy for elderly users to interact with.</p>
+    </section>
+
+    <section aria-labelledby="Target-title">
+        <h1 id="Target-title"> Older web user, with vision and hearing loss</h1>
+        <div class="about-persona"> 
+            <img src="img/john.webp" id="imAbout" alt="Illustration of John and elderly gentelman and text saying he is 76 years old and he his losing his eysight and his earing.">
+        </div>
+
+    </section>
+    
+</main>
+
+<button id="top" onclick="backtotop()" aria-label="Go back to top">↑</button>
+
+<footer class="footer">
+    <div class="slider-control" aria-label="Volume slider-control">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume"  min="0" max="1" step="0.1" value="1" aria-valuetext="100%">
+    </div>
+    <div class="slider-control" aria-label="Speed slider-control">
+        <label for="velocidade">Speed</label>
+        <input type="range" id="velocidade" min="0.5" max="2" step="0.1" value="1" aria-valuetext="Normal speed">
+    </div>
+</footer>
+
+<script src="tts.js"></script>
+<script>
+  inicializarTTS();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

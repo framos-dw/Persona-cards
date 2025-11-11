@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Persona Cards</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo saying Persona Cards">
+        </a>
+    </div>          
+    <nav>
+        <a href="index.html" aria-label="home">home</a>
+        <a href="personas.html" aria-label="persona">personas</a>
+        <a href="beforeafter.html" class="active" aria-label="before vs after">before vs after</a>
+        <a href="about.html" aria-label="about">about</a>
+    </nav>
+
+    <div class="text-size-control" aria-label="Text size controls">
+        <span>Text Size</span>
+        <button onclick="decreaseText()" aria-label="Decrease text size">-</button>
+        <span id="textSizePercent">100%</span>
+        <button onclick="increaseText()" aria-label="Increase text size">+</button>
+    </div>
+    
+</header>
+
+<main>
+    <h1 id="about">Before vs After</h1>
+    <section class="cards-section" aria-labelledby="comparison-title">
+        <div class="cards-ba">
+            <!--Card Before-->
+        <div class="flip-card" tabindex="0" aria-label="Before redesign card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="img/before-front.webp" alt="Original persona card with very detailed image">
+                </div>
+                <div class="flip-back">
+                    <img src="img/before-back.webp" alt="Original persona card with very small text">
+                </div>
+            </div>
+            <p>before</p>
+        </div>
+
+        <!--Card After-->
+        <div class="flip-card" tabindex="0" aria-label="After redesign card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="img/after-front.webp" alt="New persona card with simple illustration">
+                </div>
+                <div class="flip-back">
+                    <img src="img/after-back.webp" alt="new persona card with readable text">
+                </div>
+            </div>
+            <p>after</p>
+        </div>
+
+        </div>
+    </section>
+
+    <section aria-labelledby="changes-title" class="changes-card">
+        <h3>List of Changes</h3>
+        <ul  aria-label="changes made">
+            <li>Simplification of illustration</li>
+            <li>Restructuring of card</li>
+            <li>Format</li>
+            <li>Typography</li>
+            <li>Colour palette</li>
+            <li>Font size</li>
+        </ul>
+    </section>
+    
+</main>
+
+<button id="top" onclick="backtotop()" aria-label="Go back to top">↑</button>
+
+<footer class="footer">
+    <div class="slider-control" aria-label="Volume slider-control">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume"  min="0" max="1" step="0.1" value="1" aria-valuetext="100%">
+    </div>
+    <div class="slider-control" aria-label="Speed slider-control">
+        <label for="velocidade">Speed</label>
+        <input type="range" id="velocidade" min="0.5" max="2" step="0.1" value="1" aria-valuetext="Normal speed">
+    </div>
+</footer>
+
+<script src="tts.js"></script>
+<script>
+  inicializarTTS();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Persona Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo saying Persona Cards">
+        </a>
+    </div>          
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active" aria-label="home">home</a></li>
+            <li><a href="personas.html" aria-label="persona">personas</a></li>
+            <li><a href="beforeafter.html" aria-label="before vs after">before vs after</a></li>
+            <li><a href="about.html" aria-label="about">about</a></li>
+    
+        </ul>
+        
+    </nav>
+
+    <div class="text-size-control" aria-label="Text size controls">
+        <span>Text Size</span>
+        <button onclick="decreaseText()" aria-label="Decrease text size">-</button>
+        <span id="textSizePercent">100%</span>
+        <button onclick="increaseText()" aria-label="Increase text size">+</button>
+    </div>
+    
+</header>
+
+<main>
+    <h1 id="title-home">Persona<br>Cards</h1>
+     <p class="text-home">
+        This website was created as an accessible alternative to traditional personal cards.
+    </p>
+    <div class="illustrations" aria-label="Illustrations of diferent personas">
+        <img src="img/john-1.webp" alt="illustration of John, elder losing eyesight and earing.">
+        <img src="img/jacob.webp" alt="illustration of jacob, blind geek.">
+        <img src="img/lea-2.webp" alt=" illustration of Lea, living with fatigue and pain">
+    </div>
+
+</main>
+
+<button id="top" onclick="backtotop()" aria-label="Go back to top">↑</button>
+
+<footer class="footer">
+    <div class="slider-control" aria-label="Volume slider-control">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume"  min="0" max="1" step="0.1" value="1" aria-valuetext="100%">
+    </div>
+    <div class="slider-control" aria-label="Speed slider-control">
+        <label for="velocidade">Speed</label>
+        <input type="range" id="velocidade" min="0.5" max="2" step="0.1" value="1" aria-valuetext="Normal speed">
+    </div>
+</footer>
+
+<script src="tts.js"></script>
+<script>
+  inicializarTTS();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
